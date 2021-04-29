@@ -1,12 +1,30 @@
 const Discord = require("discord.js");
 const config = require("./config.json");
+const talents = require("./talenthacker");
 
 const client = new Discord.Client();
 
-client.on("message", function(message) {
-  if (message.author.bot) return;
-  
-  console.log(`${message.author.username}: ${message.content}`);
-});
-
 client.login(config.BOT_TOKEN);
+
+let lastestDate = Date.now();
+
+function revisarEnlaces()
+{
+  talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
+  .then(result => {    
+    lastestDate = result.lastestDate;
+    for(let url of result.urls) {
+      client.channels.cache.get('836477980267249726').send(url);
+    }
+  })
+  .catch(console.error);
+}
+
+setInterval(revisarEnlaces, 1 * 60 * 60 * 1000);
+
+client.on('ready', () => {
+  console.log(`Bot is ready ${client.user.tag}`);
+  //client.user.setActivity('/help', { type: 'LISTENING' });
+  revisarEnlaces();
+
+});
