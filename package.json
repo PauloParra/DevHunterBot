@@ -1,0 +1,22 @@
+{
+  "name": "devhunterbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauloParra/DevHunterBot.git"
+  },
+  "author": "Paulo Parra (Crasel)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PauloParra/DevHunterBot/issues"
+  },
+  "homepage": "https://github.com/PauloParra/DevHunterBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}
