@@ -4,8 +4,8 @@ const talents = require("./talenthacker");
 
 const client = new Discord.Client();
 
-client.login(config.BOT_TOKEN);
-client.login("");
+// client.login(config.BOT_TOKEN);
+client.login("ODM2OTM0Njc1MzgxMDkyMzgy.YIlOKA.QvPikFOUhFtukM1kdeNYed8tEnY");
 
 
 let lastestDate = Date.now();
