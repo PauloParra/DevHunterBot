@@ -4,7 +4,10 @@ const talents = require("./talenthacker");
 
 const client = new Discord.Client();
 
-// client.login(config.BOT_TOKEN);
+// descomentar cuando suba a Github
+// client.login(config.BOT_TOKEN); 
+
+// Comentar cuando suba a GitHub y descomentar cuando suba a Heroku
 client.login("ODM2OTM0Njc1MzgxMDkyMzgy.YIlOKA.QvPikFOUhFtukM1kdeNYed8tEnY");
 
 
