@@ -26,5 +26,4 @@ client.on('ready', () => {
   console.log(`Bot is ready ${client.user.tag}`);
   //client.user.setActivity('/help', { type: 'LISTENING' });
   revisarEnlaces(); // BORRAME
-  // asd
 });
