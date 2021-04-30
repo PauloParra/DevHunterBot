@@ -15,12 +15,16 @@ function revisarEnlaces()
     lastestDate = result.lastestDate;
     for(let url of result.urls) {
       client.channels.cache.get('801717547090051104').send(url);
+      // discord prueba 836477980267249726
+      // discord LinkeDevs 801717547090051104
     }
   })
   .catch(console.error);
 }
 
+// setInterval(revisarEnlaces, 1 * 60 * 60 * 1000);
 setInterval(revisarEnlaces, 1 * 60 * 60 * 1000);
+
 
 client.on('ready', () => {
   console.log(`Bot is ready ${client.user.tag}`);
