@@ -5,7 +5,7 @@ const talents = require("./talenthacker");
 const client = new Discord.Client();
 
 client.login(config.BOT_TOKEN);
-client.login("ODM2OTM0Njc1MzgxMDkyMzgy.YIlOKA.g5wWa-elRXzO5v1FWN-2oAZf4Ck");
+client.login("");
 
 
 let lastestDate = Date.now();
