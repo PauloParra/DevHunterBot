@@ -7,6 +7,7 @@ client.login(process.env.BOT_TOKEN);
 
 let lastestDate = Date.now() - 3600000 * 10;
 
+
 function revisarEnlaces()
 {
   talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
