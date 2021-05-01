@@ -5,7 +5,7 @@ const client = new Discord.Client();
 
 client.login(process.env.BOT_TOKEN);
 
-let lastestDate = Date.now() - 3600000 * 10;
+let lastestDate = Date.now() - 3600000 * 8;
 
 
 function revisarEnlaces()
