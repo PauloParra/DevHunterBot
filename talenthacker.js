@@ -33,7 +33,7 @@ module.exports = (date, link, affiliate) => {
                 const now = new Date();
                 const jobBody = await requestPromise(jobLink);
 
-                let actualizado = jobBody.match(/Actualizado hace (\d+) horas/);
+                let actualizado = jobBody.match(/Actualizado hace (\d+)/);
                 if (actualizado) {                                                    
                     const published = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours()) - actualizado[1] * 3600000;
                     if (published > date) {
