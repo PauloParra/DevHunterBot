@@ -26,7 +26,7 @@ module.exports = (date, link, affiliate) => {
     
             const json = JSON.parse(script[1]);
             
-            const jobs = json.allJobs.splice(0, 5);
+            const jobs = json.allJobs.splice(0, 10);
 
             for(let job of jobs) {
                 const jobLink = `${link}${job.area}/${job.slug}`;
