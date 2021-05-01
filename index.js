@@ -20,7 +20,9 @@ function revisarEnlaces()
   .catch(console.error);
 }
 
-setInterval(revisarEnlaces, 1 * 60 * 60 * 1000);
+// setInterval(revisarEnlaces, 1 * 60 * 60 * 1000);
+setInterval(revisarEnlaces);
+
 
 
 client.on('ready', () => {
