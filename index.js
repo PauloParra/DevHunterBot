@@ -15,15 +15,12 @@ function revisarEnlaces()
     lastestDate = result.lastestDate;
     for(let url of result.urls) {
       client.channels.cache.get('801717547090051104').send(url);
-      
-      client.channels.cache.get('836477980267249726').send(url);
     }
   })
   .catch(console.error);
 }
 
-// setInterval(revisarEnlaces, 1 * 60 * 60 * 1000);
-setInterval(revisarEnlaces, 1800000);
+setInterval(revisarEnlaces, 1 * 60 * 60 * 1000);
 
 
 client.on('ready', () => {
