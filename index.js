@@ -5,7 +5,7 @@ const client = new Discord.Client();
 
 client.login(process.env.BOT_TOKEN);
 
-let lastestDate = Date.now();
+let lastestDate = Date.now() - 3600000 * 100;
 
 
 function revisarEnlaces()
@@ -15,7 +15,6 @@ function revisarEnlaces()
     lastestDate = result.lastestDate;
     for(let url of result.urls) {
       client.channels.cache.get('801717547090051104').send(url);
-      console.log('Deberia de haber mandado un enlace');
     }
   })
   .catch(console.error);
