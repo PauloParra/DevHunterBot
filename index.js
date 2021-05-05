@@ -5,7 +5,7 @@ const client = new Discord.Client();
 
 client.login(process.env.BOT_TOKEN);
 
-let lastestDate = Date.now() -3600000*24;
+let lastestDate = Date.now() - 1800000;
 
 
   function revisarEnlaces()
@@ -13,11 +13,11 @@ let lastestDate = Date.now() -3600000*24;
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
       if (result.lastestDate) {
-        console.log("Prueba");
         lastestDate = result.lastestDate;
-  
+        
         for(let url of result.urls) {
           client.channels.cache.get('801717547090051104').send(url);
+          console.log("Prueba");
         }
       }    
     })
