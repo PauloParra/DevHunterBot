@@ -10,10 +10,10 @@ let lastestDate = Date.now();
 
   function revisarEnlaces()
   {
-    console.log("Prueba");
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
       if (result.lastestDate) {
+        console.log("Prueba");
         lastestDate = result.lastestDate;
   
         for(let url of result.urls) {
