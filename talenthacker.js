@@ -1,5 +1,4 @@
 const request = require('request');
-console.log("Talentahacker");
 
 function requestPromise(link)
 {
@@ -18,13 +17,10 @@ function requestPromise(link)
 module.exports = (date, link, affiliate) => {
     return new Promise( async (resolve, reject) => {       
         try {
-            console.log("Buscando....");
             let lastestDate;
             const urls = [];
 
             const body = await requestPromise(link);
-
-            console.log(body);
 
             const script = body.match(/<script>window\.__INITIAL_STATE__=(.*?)<\/script>/);
     
@@ -33,7 +29,6 @@ module.exports = (date, link, affiliate) => {
             const jobs = json.allJobs.splice(0, 5);
 
             for(let job of jobs) {
-                console.log(job);
                 const jobLink = `${link}${job.area}/${job.slug}`;
                 const now = new Date();
                 const jobBody = await requestPromise(jobLink);
@@ -51,8 +46,6 @@ module.exports = (date, link, affiliate) => {
             resolve({urls, lastestDate});
         }
         catch(error){
-            console.log(error);
-
             reject(error);
         }        
     });    
