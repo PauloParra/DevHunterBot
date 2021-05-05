@@ -5,7 +5,7 @@ const client = new Discord.Client();
 
 client.login(process.env.BOT_TOKEN);
 
-let lastestDate = Date.now() - 1800000;
+let lastestDate = Date.now() - 1000;
 
 
   function revisarEnlaces()
@@ -16,7 +16,8 @@ let lastestDate = Date.now() - 1800000;
         lastestDate = result.lastestDate;
         
         for(let url of result.urls) {
-          client.channels.cache.get('801717547090051104').send(url);
+          // client.channels.cache.get('801717547090051104').send(url);
+          client.channels.cache.get('836477980267249726').send(url);          
           console.log("Prueba");
         }
       }    
