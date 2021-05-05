@@ -30,6 +30,8 @@ let lastestDate = Date.now() - 3600000 * 12;
   client.on('ready', () => {
     console.log(`Bot is ready ${client.user.tag}`);
     revisarEnlaces(); 
-    setInterval(revisarEnlaces, 3600000);
+    // setInterval(revisarEnlaces, 3600000);
+    setInterval(revisarEnlaces, 15000);
+
 
 });
