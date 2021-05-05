@@ -12,6 +12,7 @@ function revisarEnlaces()
 {
   function revisarEnlaces()
   {
+    console.log("Revisar enlaces");
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
       if (result.lastestDate) {

@@ -1,4 +1,5 @@
 const request = require('request');
+console.log("Talentahacker");
 
 function requestPromise(link)
 {
@@ -17,6 +18,7 @@ function requestPromise(link)
 module.exports = (date, link, affiliate) => {
     return new Promise( async (resolve, reject) => {       
         try {
+            console.log("Buscando....");
             let lastestDate;
             const urls = [];
 
@@ -49,6 +51,8 @@ module.exports = (date, link, affiliate) => {
             resolve({urls, lastestDate});
         }
         catch(error){
+            console.log(error);
+
             reject(error);
         }        
     });    
