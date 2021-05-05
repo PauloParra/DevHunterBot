@@ -10,6 +10,7 @@ let lastestDate = Date.now() - 3600000 * 12;
 
   function revisarEnlaces()
   {
+    console.log("Entro en el revisarEnlaces");
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
       if (result.lastestDate) {
@@ -30,8 +31,7 @@ let lastestDate = Date.now() - 3600000 * 12;
   client.on('ready', () => {
     console.log(`Bot is ready ${client.user.tag}`);
     revisarEnlaces(); 
-    // setInterval(revisarEnlaces, 3600000);
-    setInterval(revisarEnlaces, 15000);
+    setInterval(revisarEnlaces, 3600000);
 
 
 });
