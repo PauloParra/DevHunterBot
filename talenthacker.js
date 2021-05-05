@@ -22,6 +22,8 @@ module.exports = (date, link, affiliate) => {
 
             const body = await requestPromise(link);
 
+            console.log(body);
+
             const script = body.match(/<script>window\.__INITIAL_STATE__=(.*?)<\/script>/);
     
             const json = JSON.parse(script[1]);
