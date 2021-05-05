@@ -5,7 +5,7 @@ const client = new Discord.Client();
 
 client.login(process.env.BOT_TOKEN);
 
-let lastestDate = Date.now() - 1000;
+let lastestDate = Date.now() - 3600000;
 
 
   function revisarEnlaces()
@@ -30,5 +30,7 @@ let lastestDate = Date.now() - 1000;
   client.on('ready', () => {
     console.log(`Bot is ready ${client.user.tag}`);
     revisarEnlaces(); 
-    setInterval(revisarEnlaces, 3600000);
+    // setInterval(revisarEnlaces, 3600000);
+    setInterval(revisarEnlaces, 1000);
+
 });
