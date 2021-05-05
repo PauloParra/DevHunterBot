@@ -8,8 +8,6 @@ client.login(process.env.BOT_TOKEN);
 let lastestDate = Date.now();
 
 
-function revisarEnlaces()
-{
   function revisarEnlaces()
   {
     console.log("Revisar enlaces");
@@ -25,7 +23,7 @@ function revisarEnlaces()
     })
     .catch(console.error);
   }
-}
+
 
 setInterval(revisarEnlaces, 1 * 60 * 60 * 1000);
 
