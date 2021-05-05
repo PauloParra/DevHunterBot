@@ -10,6 +10,7 @@ let lastestDate = Date.now();
 
   function revisarEnlaces()
   {
+    console.log("Prueba");
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
       if (result.lastestDate) {
