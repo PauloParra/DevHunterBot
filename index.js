@@ -24,9 +24,9 @@ let lastestDate = Date.now();
   }
 
 
-setInterval(revisarEnlaces, 1 * 60 * 60 * 1000);
-
-client.on('ready', () => {
-  console.log(`Bot is ready ${client.user.tag}`);
-  revisarEnlaces(); 
+  
+  client.on('ready', () => {
+    console.log(`Bot is ready ${client.user.tag}`);
+    revisarEnlaces(); 
+    setInterval(revisarEnlaces, 3600000);
 });
