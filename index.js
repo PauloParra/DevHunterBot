@@ -5,12 +5,16 @@ const client = new Discord.Client();
 
 client.login(process.env.BOT_TOKEN);
 
-let lastestDate = Date.now() - 86400000; // 24 horas en milisegundos
+let lastestDate = Date.now(); // 24 horas en milisegundos
+
+let fechaActualComprobacion = new Date();
+let horaActualComprobacion = fechaActualComprobacion.getHours();
+let minActualComprobacion = fechaActualComprobacion.getMinutes();
 
 
   function revisarEnlaces()
   {
-    console.log("Reviso los enlaces");
+    console.log("Reviso los enlaces. Son las : " + horaActualComprobacion + ":" +minActualComprobacion);
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
       if (result.lastestDate) {
