@@ -8,16 +8,13 @@ client.login(process.env.BOT_TOKEN);
 let lastestDate = Date.now(); 
 
     // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
-let ahoraSon = new Date();
+let ahoraSon = new Date.now();
 let ahoraSonHoras = ahoraSon.getHours() + 2;
 let ahoraSonMinutes = ahoraSon.getMinutes();
 let ahoraSonSeconds = ahoraSon.getSeconds();
 
 
 // let fechaActualComprobacion = Date.now(ahoraSon.getHours(),ahoraSon.getMinutes(),ahoraSon.getMinutes());
-
-
-
 
   function revisarEnlaces()
   {
@@ -43,8 +40,7 @@ let ahoraSonSeconds = ahoraSon.getSeconds();
   client.on('ready', () => {
     console.log(`Bot is ready ${client.user.tag}`);
     revisarEnlaces(); 
-    setInterval(revisarEnlaces, 3600000);
-
-
+    setInterval(revisarEnlaces, 1000);
+    // setInterval(revisarEnlaces, 3600000);
 
 });
