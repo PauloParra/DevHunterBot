@@ -8,10 +8,9 @@ client.login(process.env.BOT_TOKEN);
 let lastestDate = Date.now(); 
 
     // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
-let ahoraSon = new Date.now();
-let ahoraSonHoras = ahoraSon.getHours() + 2;
-let ahoraSonMinutes = ahoraSon.getMinutes();
-let ahoraSonSeconds = ahoraSon.getSeconds();
+let ahoraSonHoras = new Date().getHours;
+let ahoraSonMinutes = new Date().getMinutes;
+let ahoraSonSeconds = new Date().getSeconds;
 
 
 // let fechaActualComprobacion = Date.now(ahoraSon.getHours(),ahoraSon.getMinutes(),ahoraSon.getMinutes());
