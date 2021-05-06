@@ -26,7 +26,7 @@ module.exports = (date, link, affiliate) => {
     
             const json = JSON.parse(script[1]);
             
-            const jobs = json.allJobs.splice(0, 5);
+            const jobs = json.allJobs.splice(0, 3);
 
             for(let job of jobs) {
                 const jobLink = `${link}${job.area}/${job.slug}`;
@@ -34,6 +34,7 @@ module.exports = (date, link, affiliate) => {
                 const jobBody = await requestPromise(jobLink);
 
                 let actualizado = jobBody.match(/Actualizado hace (\d+) horas/);
+                
                 if (actualizado) {                                                    
                     const published = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours()) - actualizado[1] * 3600000;
                     if (published > date) {

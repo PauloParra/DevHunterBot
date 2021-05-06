@@ -1,7 +1,7 @@
 {
   "name": "devhunterbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bot para la busqueda de trabajo en Talents Hacker",
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js"

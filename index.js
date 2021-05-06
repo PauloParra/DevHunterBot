@@ -5,12 +5,12 @@ const client = new Discord.Client();
 
 client.login(process.env.BOT_TOKEN);
 
-let lastestDate = Date.now() - 3600000 * 12;
+let lastestDate = Date.now() - 86400000; // 24 horas en milisegundos
 
 
   function revisarEnlaces()
   {
-    console.log("Entro en el revisarEnlaces");
+    console.log("Reviso los enlaces");
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
       if (result.lastestDate) {
@@ -19,7 +19,6 @@ let lastestDate = Date.now() - 3600000 * 12;
         for(let url of result.urls) {
           // client.channels.cache.get('801717547090051104').send(url);
           client.channels.cache.get('836477980267249726').send(url);
-          console.log("prueba");
         }
       }    
     })
