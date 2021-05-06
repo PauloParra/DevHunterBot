@@ -5,16 +5,22 @@ const client = new Discord.Client();
 
 client.login(process.env.BOT_TOKEN);
 
-let lastestDate = Date.now(); // 24 horas en milisegundos
+let lastestDate = Date.now(); 
 
+    // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
 let fechaActualComprobacion = new Date();
 let horaActualComprobacion = fechaActualComprobacion.getHours() + 2;
 let minActualComprobacion = fechaActualComprobacion.getMinutes();
+let secActualComprobacion = fechaActualComprobacion.getSeconds();
+
+
 
 
   function revisarEnlaces()
   {
-    console.log("Reviso los enlaces. Son las : " + horaActualComprobacion + ":" +minActualComprobacion);
+    // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
+    console.log("Reviso los enlaces. Son las : " + horaActualComprobacion + ":" + minActualComprobacion + ":" + secActualComprobacion);
+
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
       if (result.lastestDate) {
@@ -34,8 +40,7 @@ let minActualComprobacion = fechaActualComprobacion.getMinutes();
   client.on('ready', () => {
     console.log(`Bot is ready ${client.user.tag}`);
     revisarEnlaces(); 
-    // setInterval(revisarEnlaces, 3600000);
-    setInterval(revisarEnlaces, 60000);
+    setInterval(revisarEnlaces, 3600000);
 
 
 
