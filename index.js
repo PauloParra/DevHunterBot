@@ -9,7 +9,7 @@ let lastestDate = Date.now();
 
     // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
 let ahoraSon = new Date();
-let fechaActualComprobacion = Date.UTC(ahoraSon.getHours(),ahoraSon.getMinutes(),ahoraSon.getMinutes());
+let fechaActualComprobacion = Date.now(ahoraSon.getHours(),ahoraSon.getMinutes(),ahoraSon.getMinutes());
 
 
 
