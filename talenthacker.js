@@ -31,8 +31,7 @@ module.exports = (date, link, affiliate) => {
             for(let job of jobs) {
                 const jobLink = `${link}${job.area}/${job.slug}`;
 
-                // const now = new Date();
-                let now = new Date.now();
+                const now = new Date();
 
                 const jobBody = await requestPromise(jobLink);
 
