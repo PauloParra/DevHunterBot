@@ -34,7 +34,7 @@ module.exports = (date, link, affiliate) => {
                 const jobBody = await requestPromise(jobLink);
 
                 // let actualizado = jobBody.match(/Actualizado hace (\d+) horas/);
-                let actualizado = jobBody.match(/Actualizado hace /);
+                let actualizado = jobBody.match(/Actualizado hace (\d+)/);
 
                 
                 if (actualizado) {                                                    
