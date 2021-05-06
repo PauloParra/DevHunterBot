@@ -29,18 +29,8 @@ module.exports = (date, link, affiliate) => {
 
             for (let job of jobs) {
                 const jobLink = `${link}${job.area}/${job.slug}`;
-                const now = new Date(new Date().toLocaleString("en-US", {timeZone: 'Europe/Madrid'}));
+                const now = new Date(new Date().toLocaleString("en-US", {timeZone: 'Etc/GMT+2'}));
                 const jobBody = await requestPromise(jobLink);
-
-                // const actualizado = jobBody.match(/Actualizado hace (\d+) horas/);
-
-                // if (actualizado) {                                                    
-                //     const published = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours()) - actualizado[1] * 3600000;
-                //     if (published > date) {
-                //         lastestDate = lastestDate ? Math.max(lastestDate, published) : published;
-                //         urls.push(jobLink+affiliate);
-                //     }
-                // }
 
                 let actualizado = jobBody.match(/Actualizado hace (\d+) horas/);
                 if (actualizado) {
