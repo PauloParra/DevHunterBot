@@ -18,7 +18,7 @@ let ahoraSonSeconds = new Date().getSeconds;
   function revisarEnlaces()
   {
     // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
-    console.log("Reviso los enlaces. Son las : " + ahoraSonHoras + ":" + ahoraSonMinutes + ":" + ahoraSonSeconds);
+    console.log("Reviso los enlaces. Son las : " + ahoraSonHoras() + ":" + ahoraSonMinutes() + ":" + ahoraSonSeconds());
 
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
