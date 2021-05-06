@@ -8,7 +8,7 @@ client.login(process.env.BOT_TOKEN);
 let lastestDate = Date.now(); // 24 horas en milisegundos
 
 let fechaActualComprobacion = new Date();
-let horaActualComprobacion = fechaActualComprobacion.getHours();
+let horaActualComprobacion = fechaActualComprobacion.getHours() + 2;
 let minActualComprobacion = fechaActualComprobacion.getMinutes();
 
 
