@@ -9,7 +9,7 @@ let lastestDate = Date.now();
 
     // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
 let laHora = new Date();
-let ahoraSonHoras = laHora.getHours();
+let ahoraSonHoras = laHora.getHours() + 2;
 let ahoraSonMinutes = laHora.getMinutes();
 let ahoraSonSeconds = laHora.getSeconds();
 
@@ -40,7 +40,6 @@ let ahoraSonSeconds = laHora.getSeconds();
   client.on('ready', () => {
     console.log(`Bot is ready ${client.user.tag}`);
     revisarEnlaces(); 
-    setInterval(revisarEnlaces, 1000);
-    // setInterval(revisarEnlaces, 3600000);
+    setInterval(revisarEnlaces, 3600000);
 
 });
