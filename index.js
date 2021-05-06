@@ -7,19 +7,10 @@ client.login(process.env.BOT_TOKEN);
 
 let lastestDate = Date.now(); 
 
-    // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
-let laHora = new Date();
-let ahoraSonHoras = laHora.getHours() + 2;
-let ahoraSonMinutes = laHora.getMinutes();
-let ahoraSonSeconds = laHora.getSeconds();
-
-
-// let fechaActualComprobacion = Date.now(ahoraSon.getHours(),ahoraSon.getMinutes(),ahoraSon.getMinutes());
-
   function revisarEnlaces()
   {
     // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
-    console.log("Reviso los enlaces. Son las : " + ahoraSonHoras + ":" + ahoraSonMinutes + ":" + ahoraSonSeconds);
+    console.log("Reviso los enlaces");
 
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
@@ -40,6 +31,8 @@ let ahoraSonSeconds = laHora.getSeconds();
   client.on('ready', () => {
     console.log(`Bot is ready ${client.user.tag}`);
     revisarEnlaces(); 
-    setInterval(revisarEnlaces, 3600000);
+    // setInterval(revisarEnlaces, 3600000);
+    setInterval(revisarEnlaces, 60000);
+
 
 });
