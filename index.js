@@ -9,6 +9,10 @@ let lastestDate = Date.now();
 
     // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
 let ahoraSon = new Date();
+let ahoraSonHoras = ahoraSon.getHours() + 2;
+let ahoraSonMinutes = ahoraSon.getMinutes();
+let ahoraSonSeconds = ahoraSon.getSeconds();
+
 
 // let fechaActualComprobacion = Date.now(ahoraSon.getHours(),ahoraSon.getMinutes(),ahoraSon.getMinutes());
 
@@ -18,7 +22,7 @@ let ahoraSon = new Date();
   function revisarEnlaces()
   {
     // BORRAR AL COMPROBAR QUE ENTRA SIEMPRE
-    console.log("Reviso los enlaces. Son las : " + ahoraSon.getHours() + ":" + ahoraSon.getMinutes() + ":" + ahoraSon.getSeconds);
+    console.log("Reviso los enlaces. Son las : " + ahoraSonHoras + ":" + ahoraSonMinutes + ":" + ahoraSonSeconds);
 
     talents(lastestDate, 'https://talenthackers.net/spots/', '?rid=Jg7CFCYggrDn')
     .then(result => {    
