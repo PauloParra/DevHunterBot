@@ -29,7 +29,7 @@ module.exports = (date, link, affiliate) => {
 
             for (let job of jobs) {
                 const jobLink = `${link}${job.area}/${job.slug}`;
-                const now = new Date(new Date().toLocaleString("en-US", {timeZone: 'Etc/GMT+2'}));
+                const now = new Date(new Date().toLocaleString("en-US", {timeZone: 'Europe/Madrid'}));
                 const jobBody = await requestPromise(jobLink);
 
                 let actualizado = jobBody.match(/Actualizado hace (\d+) horas/);
