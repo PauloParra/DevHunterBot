@@ -33,7 +33,7 @@ client.on('ready', () => {
   console.log(`Bot is ready ${client.user.tag}`);
   revisarEnlaces();
   // setInterval(revisarEnlaces, 3600000);
-  setInterval(revisarEnlaces, 60000);
+  setInterval(revisarEnlaces, 30000);
 
 
 
