@@ -35,7 +35,9 @@ module.exports = (date, link, affiliate) => {
                 let actualizado = jobBody.match(/Actualizado hace (\d+) horas/);
                 if (actualizado) {
                     console.log(`Actualizado hace ${actualizado[1]} horas. Ahora: ${new Date()}`);
-                    const published = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours()) - actualizado[1] * 3600000;
+                    // const published = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours()) - actualizado[1] * 3600000;
+                    let published = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours()) - actualizado[1] * 3600000;
+
                     console.log(`${new Date(published)} > ${new Date(date)}`);
                     if (published > date) {
                         lastestDate = lastestDate ? Math.max(lastestDate, published) : published;
