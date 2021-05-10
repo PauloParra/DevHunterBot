@@ -16,7 +16,7 @@ function requestPromise(link)
     });
 }
 
-module.exports = (link, affiliate, max_size = 5) => {
+module.exports = (link, affiliate, max_size = 3) => {
     return new Promise( async (resolve, reject) => {       
         try {
             const body = await requestPromise(link);
